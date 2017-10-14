@@ -1,6 +1,6 @@
 int led = 13,
     LDR = 0,
-    valorObtido = 0;
+    getValue = 0;
 bool a = false;
 long auxTime = 0;
 /*-----------------------------------------------*/
