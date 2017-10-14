@@ -13,26 +13,26 @@ void setup()
 
 void loop()
 {
-    valorObtido = analogRead(LDR);
-    if (valorObtido >= 690 && a == false)
+    getValue = analogRead(LDR);
+    if (getValue >= 690 && a == false)
     {
         digitalWrite(led, HIGH);
-        Serial.print(valorObtido);
+        Serial.print(getValue);
         Serial.println(" - Led ligado!");
         a = true;
     }
 
-    if (valorObtido <= 689 && a == true)
+    if (getValue <= 689 && a == true)
     {
         digitalWrite(led, LOW);
-        Serial.print(valorObtido);
+        Serial.print(getValue);
         Serial.println(" - Led desligado!");
         a = false;
     }
 
     if ((millis() - auxTime) > 1000)
     {
-        Serial.println(valorObtido);
+        Serial.println(getValue);
         auxTime = millis();
     }
 }
