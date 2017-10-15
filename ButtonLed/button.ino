@@ -14,13 +14,13 @@ void setup()
 void loop()
 {
     a = digitalRead(button);
-        if (a == 0)
-        {
+    if (a == 0)
+    {
 
-            blink();
-            digitalWrite(led, state);
-            delay(200);
-        }
+        blink();
+        digitalWrite(led, state);
+        delay(200);
+    }
 }
 
 void blink()
