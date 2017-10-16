@@ -31,10 +31,10 @@ void loop()
         Serial.print("Unknown error\t");
         break;
     }
-
-    Serial.print(DHT.humidity);
+    
+    Serial.print(DHT.humidity,1);
     Serial.print("% Humidity | ");
-    Serial.print(DHT.temperature);
+    Serial.print(DHT.temperature,1);
     Serial.println("C Temperature");
 
     delay(2000);
