@@ -11,8 +11,6 @@ void setup()
 
 void loop()
 {
-    //int chk = DHT.read11(DHT11_PIN);
-
     Serial.print("DHT11, Status -> ");
 
     switch (DHT.read11(DHT11_PIN))
