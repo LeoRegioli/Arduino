@@ -1,5 +1,5 @@
 {
-    "sketch": "DHT11\\dht11.ino",
+    "sketch": "MotionSensor\\MotionSensor.ino",
     "board": "arduino:avr:uno",
     "port": "COM3"
 }

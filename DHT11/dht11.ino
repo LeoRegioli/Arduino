@@ -31,7 +31,7 @@ void loop()
         Serial.print("Unknown error\t");
         break;
     }
-    
+
     Serial.print(DHT.humidity,1);
     Serial.print("% Humidity | ");
     Serial.print(DHT.temperature,1);
