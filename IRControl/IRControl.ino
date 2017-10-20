@@ -1,7 +1,7 @@
 #include <IRremote.h>
 #include <IRremoteInt.h>
 
-#define IRControl 13
+#define IRControl 7
 #define led 8
 
 IRrecv irrecv(IRControl);
@@ -32,6 +32,7 @@ void loop()
             Serial.println("Led desligado");
             break;
         }
+        Serial.println(results.value);
         irrecv.resume();
     }
 }

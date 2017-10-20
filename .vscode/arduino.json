@@ -1,5 +1,5 @@
 {
-    "sketch": "MotionSensor\\MotionSensor.ino",
+    "sketch": "LiquidCrystal\\LC.ino",
     "board": "arduino:avr:uno",
     "port": "COM3"
 }

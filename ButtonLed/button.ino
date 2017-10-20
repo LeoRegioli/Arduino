@@ -1,4 +1,4 @@
-#define led 13
+#define led 8
 #define btn 2
 
 byte state = 0,
@@ -7,19 +7,20 @@ byte state = 0,
 void setup()
 {
     pinMode(led, OUTPUT);
-    pinMode(button, INPUT);
+    pinMode(btn, INPUT);
     Serial.begin(9600);
 }
 
 void loop()
 {
-    a = digitalRead(button);
-    if (a == 0)
+    a = digitalRead(btn);
+    if (a == 1)
     {
         blink();
         digitalWrite(led, state);
-        delay(200);
+        delay(500);
     }
+    
 }
 
 void blink()

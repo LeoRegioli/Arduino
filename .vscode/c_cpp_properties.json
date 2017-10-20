@@ -6,7 +6,8 @@
                 "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino",
                 "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\SonarI2C\\src",
                 "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\Ultrasonic\\src",
-                "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\IRremote"
+                "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\IRremote",
+                "C:\\Program Files (x86)\\Arduino\\libraries\\LiquidCrystal\\src"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": false,
@@ -16,7 +17,8 @@
                     "${workspaceRoot}",
                     "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\SonarI2C\\src",
                     "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\Ultrasonic\\src",
-                    "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\IRremote"
+                    "C:\\Users\\Leonardo Regioli\\Documents\\Arduino\\libraries\\IRremote",
+                    "C:\\Program Files (x86)\\Arduino\\libraries\\LiquidCrystal\\src"
                 ]
             },
             "intelliSenseMode": "msvc-x64"
