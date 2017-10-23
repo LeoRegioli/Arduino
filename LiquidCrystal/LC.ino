@@ -5,10 +5,10 @@
 
 LiquidCrystal lcd(13, 12, 11, 10, 9, 8);
 dht DHT;
+bool flag = false;
 
 void setup()
 {
-    //lcd.clear();
     lcd.begin(16, 2);
     lcd.home();
     lcd.print("DHT11");
@@ -20,45 +20,54 @@ void setup()
     lcd.print("C");
     lcd.setCursor(15, 1);
     lcd.print("%");
-    //Serial.begin(115200);
 }
 
 void loop()
 {
-    setup();
-// int chk = DHT.read11(dht_pin);
     switch (DHT.read11(dht_pin))
     {
     case DHTLIB_OK:
         lcd.setCursor(0, 1);
         lcd.print("St:OK");
+        flag = false;
         break;
 
     case DHTLIB_ERROR_CHECKSUM:
         lcd.clear();
         lcd.home();
-        lcd.print("St: CHECKSUM Error!");
+        lcd.print("CHECKSUM Error!");
+        flag = true;
         break;
 
     case DHTLIB_ERROR_TIMEOUT:
-        lcd.clear();
+        //lcd.clear();
         lcd.home();
-        lcd.print("St: TIMEOUT Error!");
+        lcd.print("TIMEOUT Error!");
+        flag = true;
         break;
 
     default:
         lcd.clear();
         lcd.home();
-        lcd.print("St: UNKNOWN ERROR!");
+        lcd.print("UNKNOWN ERROR!");
+        flag = true;
         break;
     }
 
-    // DHT.read11(dht_pin);
-    lcd.setCursor(11, 0);
-    lcd.print(DHT.temperature, 1);
-    lcd.setCursor(11, 1);
-    lcd.print(DHT.humidity, 1);
-    // Serial.print(DHT.humidity, 1);
-    // Serial.print(" ");
-    delay(1000);
+    if (flag == true)
+    {
+        if (DHTLIB_OK == DHT.read11(dht_pin))
+        {
+            setup();
+        }
+    }
+
+    if (flag == false)
+    {
+        lcd.setCursor(11, 0);
+        lcd.print(DHT.temperature, 1);
+        lcd.setCursor(11, 1);
+        lcd.print(DHT.humidity, 1);
+        delay(1000);
+    }
 }
